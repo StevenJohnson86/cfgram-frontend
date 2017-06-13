@@ -2,8 +2,13 @@
   "name": "lab-steven",
   "version": "1.0.0",
   "description": "",
-  "main": "./app/entry.js",
+  "main": "server.js",
+  "engines": {
+    "node": "6.10.2"
+  },
   "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "webpack --progress",
     "test": "karma start",
     "test-watch": "karma start --no-single-run --auto-watch",
     "build": "webpack",
@@ -26,6 +31,7 @@
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.4",
     "dotenv": "^4.0.0",
+    "express": "^4.15.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "html-loader": "^0.4.5",
