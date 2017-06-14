@@ -19,17 +19,17 @@ const plugins = [
   }),
 ];
 
-if(production) {
-  let plugins = plugins.concat([
-    new webpack.optimize.UglifyJsPlugin({
-      mangle: true,
-      compress: {
-        warnings: false,
-      },
-    }),
-    new CleanPlugin(),
-  ]);
-}
+// if(production) {
+//   let plugins = plugins.concat([
+//     new webpack.optimize.UglifyJsPlugin({
+//       mangle: true,
+//       compress: {
+//         warnings: false,
+//       },
+//     }),
+//     new CleanPlugin(),
+//   ]);
+// }
 
 module.exports = {
   entry: `${__dirname}/app/entry.js`,
