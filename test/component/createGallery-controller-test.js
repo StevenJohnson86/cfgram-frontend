@@ -42,7 +42,7 @@ describe('Create Gallery Component', function(){
       expect(this.createGalleryCtrl.createGallery).not.toThrow();
 
 
-      this.$httpBackend.flush();
+      // this.$httpBackend.flush();
     });
   });
 
