@@ -10,7 +10,7 @@ dotenv.load();
 
 const production = process.env.NODE_ENV === 'production';
 
-const plugins = [
+let plugins = [
   new ExtractTextPlugin('bundle.css'),
   new HTMLPlugin({ template: `${__dirname}/app/index.html` }),
   new webpack.DefinePlugin({
@@ -20,7 +20,7 @@ const plugins = [
 ];
 
 if(production) {
-  let plugins = plugins.concat([
+  plugins = plugins.concat([
     new webpack.optimize.UglifyJsPlugin({
       mangle: true,
       compress: {
