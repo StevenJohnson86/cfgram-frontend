@@ -20,7 +20,6 @@ describe('Create Gallery Component', function(){
 
   afterEach(() => {
     this.$window.localStorage.removeItem('token');
-    this.$httpBackend.flush();
     this.$rootScope.$apply();
   });
 
@@ -43,6 +42,7 @@ describe('Create Gallery Component', function(){
       expect(this.createGalleryCtrl.createGallery).not.toThrow();
 
 
+      this.$httpBackend.flush();
     });
   });
 
